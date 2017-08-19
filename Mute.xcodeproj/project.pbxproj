@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46FDCDE735B36F8ED3FD70DE /* Pods_Mute.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100125EEFF1B95B66116324 /* Pods_Mute.framework */; };
 		FC3184AB1F13ACA50099743B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3184AA1F13ACA50099743B /* AppDelegate.swift */; };
 		FC3184AD1F13ACA50099743B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3184AC1F13ACA50099743B /* ViewController.swift */; };
-		FC3184AF1F13ACA50099743B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3184AE1F13ACA50099743B /* Assets.xcassets */; };
 		FC3184B21F13ACA50099743B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3184B01F13ACA50099743B /* Main.storyboard */; };
 		FC3184BD1F13ACA50099743B /* MuteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3184BC1F13ACA50099743B /* MuteTests.swift */; };
 		FC3184C81F13ACA50099743B /* MuteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3184C71F13ACA50099743B /* MuteUITests.swift */; };
+		FC3184D71F1507230099743B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3184D61F1507230099743B /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2097C53F1D804B38FF958096 /* Pods-Mute.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mute.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mute/Pods-Mute.release.xcconfig"; sourceTree = "<group>"; };
+		6DEFFB5F16E58768F3C6D025 /* Pods-Mute.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mute.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mute/Pods-Mute.debug.xcconfig"; sourceTree = "<group>"; };
+		7100125EEFF1B95B66116324 /* Pods_Mute.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mute.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3184A71F13ACA50099743B /* Mute.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mute.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3184AA1F13ACA50099743B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3184AC1F13ACA50099743B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC3184AE1F13ACA50099743B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3184B11F13ACA50099743B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC3184B31F13ACA50099743B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3184B81F13ACA50099743B /* MuteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +48,7 @@
 		FC3184C31F13ACA50099743B /* MuteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3184C71F13ACA50099743B /* MuteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteUITests.swift; sourceTree = "<group>"; };
 		FC3184C91F13ACA50099743B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC3184D61F1507230099743B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46FDCDE735B36F8ED3FD70DE /* Pods_Mute.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		677032564069749285C6CA64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DEFFB5F16E58768F3C6D025 /* Pods-Mute.debug.xcconfig */,
+				2097C53F1D804B38FF958096 /* Pods-Mute.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D07F3D107D6D9D57E8D3A4B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7100125EEFF1B95B66116324 /* Pods_Mute.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC31849E1F13ACA50099743B = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +101,8 @@
 				FC3184BB1F13ACA50099743B /* MuteTests */,
 				FC3184C61F13ACA50099743B /* MuteUITests */,
 				FC3184A81F13ACA50099743B /* Products */,
+				677032564069749285C6CA64 /* Pods */,
+				D07F3D107D6D9D57E8D3A4B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,7 +121,7 @@
 			children = (
 				FC3184AA1F13ACA50099743B /* AppDelegate.swift */,
 				FC3184AC1F13ACA50099743B /* ViewController.swift */,
-				FC3184AE1F13ACA50099743B /* Assets.xcassets */,
+				FC3184D61F1507230099743B /* Images.xcassets */,
 				FC3184B01F13ACA50099743B /* Main.storyboard */,
 				FC3184B31F13ACA50099743B /* Info.plist */,
 			);
@@ -129,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC3184CC1F13ACA50099743B /* Build configuration list for PBXNativeTarget "Mute" */;
 			buildPhases = (
+				A9E947895FFD9200EE04B9C7 /* [CP] Check Pods Manifest.lock */,
 				FC3184A31F13ACA50099743B /* Sources */,
 				FC3184A41F13ACA50099743B /* Frameworks */,
 				FC3184A51F13ACA50099743B /* Resources */,
+				A0A7916B8135339583093CC1 /* [CP] Embed Pods Frameworks */,
+				C64B63DEA80DA08AB334C053 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,8 +259,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3184AF1F13ACA50099743B /* Assets.xcassets in Resources */,
 				FC3184B21F13ACA50099743B /* Main.storyboard in Resources */,
+				FC3184D71F1507230099743B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +279,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0A7916B8135339583093CC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mute/Pods-Mute-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9E947895FFD9200EE04B9C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C64B63DEA80DA08AB334C053 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mute/Pods-Mute-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC3184A31F13ACA50099743B /* Sources */ = {
@@ -400,6 +475,7 @@
 		};
 		FC3184CD1F13ACA50099743B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DEFFB5F16E58768F3C6D025 /* Pods-Mute.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -414,6 +490,7 @@
 		};
 		FC3184CE1F13ACA50099743B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2097C53F1D804B38FF958096 /* Pods-Mute.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -507,6 +584,7 @@
 				FC3184CE1F13ACA50099743B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC3184CF1F13ACA50099743B /* Build configuration list for PBXNativeTarget "MuteTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +593,7 @@
 				FC3184D11F13ACA50099743B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC3184D21F13ACA50099743B /* Build configuration list for PBXNativeTarget "MuteUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +602,7 @@
 				FC3184D41F13ACA50099743B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,12 @@
+PODS:
+  - AMCoreAudio (3.1.1)
+
+DEPENDENCIES:
+  - AMCoreAudio (~> 3.1.1)
+
+SPEC CHECKSUMS:
+  AMCoreAudio: 4afddc2b053033477dd3bad10fe4d65ce7be4426
+
+PODFILE CHECKSUM: f4b86bd3d29f90b8f05501214594ccd8acc49ddf
+
+COCOAPODS: 1.2.1

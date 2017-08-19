@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		010605C5BA700978FBDAC0C14A0AFC61 /* AudioObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D42527BD91024C6CBA090DF55AA4269 /* AudioObject.swift */; };
+		016AFD28D8E8EBA585A822CB51FB0F47 /* Pods-Mute-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D3CED0E555DFC464255B5ADD2B6777C /* Pods-Mute-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A4C3D83D16EBE6DB35CED33E8F07F17 /* AudioStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4203A07A5625C34AD666E548BB851123 /* AudioStream.swift */; };
+		0DB9BD7BD7AFA6E20798382D6A1F3DC6 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748B7542EC766887291997B58C8CEE06 /* NotificationCenter.swift */; };
+		0F28E691FDB29A1D090657C9FB254655 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		0F364CC4F542A72E10E0094831F740E0 /* AMCoreAudio-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC90320E52CE04C18848171C003CEFFA /* AMCoreAudio-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D2A8368A13B26986EBD91AFEF1246B0 /* Pods-Mute-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DA50BB4B3422D171CEEDC4A389C859 /* Pods-Mute-dummy.m */; };
+		448602D7DB839739FBC134689ADE9849 /* AMCoreAudio.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A8677D5885106E43CB20457BB66228 /* AMCoreAudio.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C5148D358C0ED2C0B0E8B9F354AE384 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F83D84C1A20999F907B02179E3E80 /* Bool+Extensions.swift */; };
+		6270DA70E4C3A08A4D78B5FFB12A3055 /* AudioDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A997AAA9D3F4A25A9C81726A90486C7 /* AudioDevice.swift */; };
+		6B8A2F5D8A49191FB96FC1C393D07A9C /* AudioHardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80879EE478AAAA37EFF4E028513CFCDA /* AudioHardware.swift */; };
+		71E8B3247955C2DBA2CF1CD0D70FE98C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF53140C1D8973E4D2B4442DAED81D /* Utils.swift */; };
+		74382E18575EB8867F342360DB3831E8 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC825F841E6424E7B7A64D5C7015ADC9 /* Types.swift */; };
+		8F7E805810E30183F57CB6CF26B28717 /* BundleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F61853F29E96DDB7E2475976E8E5B7 /* BundleInfo.swift */; };
+		B2E482B2AF28FC33CD534BAB2D2C4B7F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		E5523402846BF013885A6905AAB73DD0 /* AMCoreAudio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C48D9787BF4C5C0A1EC471D2789581AC /* AMCoreAudio-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4CD375A9234B30ADD76A4B845B03494 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A5B230231C32E5F59F076BC4465E49A;
+			remoteInfo = AMCoreAudio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D42527BD91024C6CBA090DF55AA4269 /* AudioObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioObject.swift; path = AMCoreAudio/AudioObject.swift; sourceTree = "<group>"; };
+		12EE343698E319AB73AABA51F6379D57 /* Pods-Mute.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mute.release.xcconfig"; sourceTree = "<group>"; };
+		1D9A0A525E7D68D98F5ADC00B7196112 /* Pods-Mute-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mute-acknowledgements.plist"; sourceTree = "<group>"; };
+		20A22429C93BFA5CF2FD08585E4172BC /* Pods_Mute.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Mute.framework; path = "Pods-Mute.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21F61853F29E96DDB7E2475976E8E5B7 /* BundleInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleInfo.swift; path = AMCoreAudio/BundleInfo.swift; sourceTree = "<group>"; };
+		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2B29E9A4B9850016C4C13D9D576F20AD /* Pods-Mute.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mute.debug.xcconfig"; sourceTree = "<group>"; };
+		2C53E45E830557FC2C25078CCA37B93E /* AMCoreAudio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AMCoreAudio.framework; path = AMCoreAudio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38A8677D5885106E43CB20457BB66228 /* AMCoreAudio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMCoreAudio.h; path = AMCoreAudio/AMCoreAudio.h; sourceTree = "<group>"; };
+		4203A07A5625C34AD666E548BB851123 /* AudioStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioStream.swift; path = AMCoreAudio/AudioStream.swift; sourceTree = "<group>"; };
+		5A985D9639A7ECA896290F3A4E90E8BA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63F1F483A7757312C49AEAAFB95EEFCB /* Pods-Mute.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Mute.modulemap"; sourceTree = "<group>"; };
+		67C7B7333484795AA60CA62CE19B1C0E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D3CED0E555DFC464255B5ADD2B6777C /* Pods-Mute-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mute-umbrella.h"; sourceTree = "<group>"; };
+		748B7542EC766887291997B58C8CEE06 /* NotificationCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NotificationCenter.swift; path = AMCoreAudio/NotificationCenter.swift; sourceTree = "<group>"; };
+		7AB67CA3E6D2C2E17DC6CA24AC986658 /* AMCoreAudio-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMCoreAudio-prefix.pch"; sourceTree = "<group>"; };
+		80879EE478AAAA37EFF4E028513CFCDA /* AudioHardware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioHardware.swift; path = AMCoreAudio/AudioHardware.swift; sourceTree = "<group>"; };
+		8A997AAA9D3F4A25A9C81726A90486C7 /* AudioDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioDevice.swift; path = AMCoreAudio/AudioDevice.swift; sourceTree = "<group>"; };
+		8BDE1F0D8B979634FE6C488ECAD8DF3C /* AMCoreAudio.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AMCoreAudio.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B1DA50BB4B3422D171CEEDC4A389C859 /* Pods-Mute-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mute-dummy.m"; sourceTree = "<group>"; };
+		BC825F841E6424E7B7A64D5C7015ADC9 /* Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Types.swift; path = AMCoreAudio/Types.swift; sourceTree = "<group>"; };
+		C48D9787BF4C5C0A1EC471D2789581AC /* AMCoreAudio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AMCoreAudio-dummy.m"; sourceTree = "<group>"; };
+		D1FD678A89F9B651DBFB46B5C8968013 /* Pods-Mute-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mute-frameworks.sh"; sourceTree = "<group>"; };
+		D407D40D611F33A1DEC19609EFC311D7 /* Pods-Mute-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mute-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D53EA1540AA1BE400B3322AF1FC3C312 /* Pods-Mute-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mute-resources.sh"; sourceTree = "<group>"; };
+		EC90320E52CE04C18848171C003CEFFA /* AMCoreAudio-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMCoreAudio-umbrella.h"; sourceTree = "<group>"; };
+		EFDF53140C1D8973E4D2B4442DAED81D /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = AMCoreAudio/Utils.swift; sourceTree = "<group>"; };
+		FA9F83D84C1A20999F907B02179E3E80 /* Bool+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bool+Extensions.swift"; path = "AMCoreAudio/Bool+Extensions.swift"; sourceTree = "<group>"; };
+		FDA8876084B57A6E49493A0E6E49D851 /* AMCoreAudio.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMCoreAudio.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		034179270DD8B6F3167293F4BD8A1F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2E482B2AF28FC33CD534BAB2D2C4B7F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52779CC26AE14898C51DDDB87D5DF255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F28E691FDB29A1D090657C9FB254655 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04C068A18C5413F804A2959126093416 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		0A5A86A1BA9EE2549EF20E36F7524077 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				374BAC9D076EF1B069E8C77E4A980C3B /* AMCoreAudio */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2DEA4897E8AFA2ACE040A1858A01DB30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C53E45E830557FC2C25078CCA37B93E /* AMCoreAudio.framework */,
+				20A22429C93BFA5CF2FD08585E4172BC /* Pods_Mute.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		374BAC9D076EF1B069E8C77E4A980C3B /* AMCoreAudio */ = {
+			isa = PBXGroup;
+			children = (
+				38A8677D5885106E43CB20457BB66228 /* AMCoreAudio.h */,
+				8A997AAA9D3F4A25A9C81726A90486C7 /* AudioDevice.swift */,
+				80879EE478AAAA37EFF4E028513CFCDA /* AudioHardware.swift */,
+				0D42527BD91024C6CBA090DF55AA4269 /* AudioObject.swift */,
+				4203A07A5625C34AD666E548BB851123 /* AudioStream.swift */,
+				FA9F83D84C1A20999F907B02179E3E80 /* Bool+Extensions.swift */,
+				21F61853F29E96DDB7E2475976E8E5B7 /* BundleInfo.swift */,
+				748B7542EC766887291997B58C8CEE06 /* NotificationCenter.swift */,
+				BC825F841E6424E7B7A64D5C7015ADC9 /* Types.swift */,
+				EFDF53140C1D8973E4D2B4442DAED81D /* Utils.swift */,
+				EA1D30927C112584C61D947649B537DC /* Support Files */,
+			);
+			name = AMCoreAudio;
+			path = AMCoreAudio;
+			sourceTree = "<group>";
+		};
+		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04C068A18C5413F804A2959126093416 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AA22FBED00DD42399F3D30A1149FFBC /* Pods-Mute */ = {
+			isa = PBXGroup;
+			children = (
+				5A985D9639A7ECA896290F3A4E90E8BA /* Info.plist */,
+				63F1F483A7757312C49AEAAFB95EEFCB /* Pods-Mute.modulemap */,
+				D407D40D611F33A1DEC19609EFC311D7 /* Pods-Mute-acknowledgements.markdown */,
+				1D9A0A525E7D68D98F5ADC00B7196112 /* Pods-Mute-acknowledgements.plist */,
+				B1DA50BB4B3422D171CEEDC4A389C859 /* Pods-Mute-dummy.m */,
+				D1FD678A89F9B651DBFB46B5C8968013 /* Pods-Mute-frameworks.sh */,
+				D53EA1540AA1BE400B3322AF1FC3C312 /* Pods-Mute-resources.sh */,
+				6D3CED0E555DFC464255B5ADD2B6777C /* Pods-Mute-umbrella.h */,
+				2B29E9A4B9850016C4C13D9D576F20AD /* Pods-Mute.debug.xcconfig */,
+				12EE343698E319AB73AABA51F6379D57 /* Pods-Mute.release.xcconfig */,
+			);
+			name = "Pods-Mute";
+			path = "Target Support Files/Pods-Mute";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
+				0A5A86A1BA9EE2549EF20E36F7524077 /* Pods */,
+				2DEA4897E8AFA2ACE040A1858A01DB30 /* Products */,
+				B1D14159BFCA540470237A318B521B09 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B1D14159BFCA540470237A318B521B09 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AA22FBED00DD42399F3D30A1149FFBC /* Pods-Mute */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EA1D30927C112584C61D947649B537DC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BDE1F0D8B979634FE6C488ECAD8DF3C /* AMCoreAudio.modulemap */,
+				FDA8876084B57A6E49493A0E6E49D851 /* AMCoreAudio.xcconfig */,
+				C48D9787BF4C5C0A1EC471D2789581AC /* AMCoreAudio-dummy.m */,
+				7AB67CA3E6D2C2E17DC6CA24AC986658 /* AMCoreAudio-prefix.pch */,
+				EC90320E52CE04C18848171C003CEFFA /* AMCoreAudio-umbrella.h */,
+				67C7B7333484795AA60CA62CE19B1C0E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AMCoreAudio";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		53A181F340A241C2B50C1816975B0314 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F364CC4F542A72E10E0094831F740E0 /* AMCoreAudio-umbrella.h in Headers */,
+				448602D7DB839739FBC134689ADE9849 /* AMCoreAudio.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		910E0319B212FB4557D48DA487F8C040 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				016AFD28D8E8EBA585A822CB51FB0F47 /* Pods-Mute-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7A5B230231C32E5F59F076BC4465E49A /* AMCoreAudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B06AD77C7709266A1EB8B4C795CE59C6 /* Build configuration list for PBXNativeTarget "AMCoreAudio" */;
+			buildPhases = (
+				E2359741D9932F54779A88C0AE4CBB64 /* Sources */,
+				034179270DD8B6F3167293F4BD8A1F24 /* Frameworks */,
+				53A181F340A241C2B50C1816975B0314 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AMCoreAudio;
+			productName = AMCoreAudio;
+			productReference = 2C53E45E830557FC2C25078CCA37B93E /* AMCoreAudio.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7F968E9AAE9F9E4165822D8B5402B54B /* Pods-Mute */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8238372440DB9B1E8C1B4B7C8AA52B1 /* Build configuration list for PBXNativeTarget "Pods-Mute" */;
+			buildPhases = (
+				FE21BF078721B2B8AC144849FB348E6C /* Sources */,
+				52779CC26AE14898C51DDDB87D5DF255 /* Frameworks */,
+				910E0319B212FB4557D48DA487F8C040 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBB4FBF283BDAB94FA333A7E424EF3B5 /* PBXTargetDependency */,
+			);
+			name = "Pods-Mute";
+			productName = "Pods-Mute";
+			productReference = 20A22429C93BFA5CF2FD08585E4172BC /* Pods_Mute.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2DEA4897E8AFA2ACE040A1858A01DB30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A5B230231C32E5F59F076BC4465E49A /* AMCoreAudio */,
+				7F968E9AAE9F9E4165822D8B5402B54B /* Pods-Mute */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2359741D9932F54779A88C0AE4CBB64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5523402846BF013885A6905AAB73DD0 /* AMCoreAudio-dummy.m in Sources */,
+				6270DA70E4C3A08A4D78B5FFB12A3055 /* AudioDevice.swift in Sources */,
+				6B8A2F5D8A49191FB96FC1C393D07A9C /* AudioHardware.swift in Sources */,
+				010605C5BA700978FBDAC0C14A0AFC61 /* AudioObject.swift in Sources */,
+				0A4C3D83D16EBE6DB35CED33E8F07F17 /* AudioStream.swift in Sources */,
+				4C5148D358C0ED2C0B0E8B9F354AE384 /* Bool+Extensions.swift in Sources */,
+				8F7E805810E30183F57CB6CF26B28717 /* BundleInfo.swift in Sources */,
+				0DB9BD7BD7AFA6E20798382D6A1F3DC6 /* NotificationCenter.swift in Sources */,
+				74382E18575EB8867F342360DB3831E8 /* Types.swift in Sources */,
+				71E8B3247955C2DBA2CF1CD0D70FE98C /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE21BF078721B2B8AC144849FB348E6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D2A8368A13B26986EBD91AFEF1246B0 /* Pods-Mute-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBB4FBF283BDAB94FA333A7E424EF3B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AMCoreAudio;
+			target = 7A5B230231C32E5F59F076BC4465E49A /* AMCoreAudio */;
+			targetProxy = A4CD375A9234B30ADD76A4B845B03494 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2970CBCB364F7C31BE14B3B513FF5020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDA8876084B57A6E49493A0E6E49D851 /* AMCoreAudio.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AMCoreAudio/AMCoreAudio-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AMCoreAudio/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/AMCoreAudio/AMCoreAudio.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AMCoreAudio;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		337AD37B27D7FFADF01DD8D7FE35B27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4B94373305ABF3EAA4358AF273799979 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDA8876084B57A6E49493A0E6E49D851 /* AMCoreAudio.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AMCoreAudio/AMCoreAudio-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AMCoreAudio/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/AMCoreAudio/AMCoreAudio.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AMCoreAudio;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		88246BF08409BFCF326920713EAFEF36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12EE343698E319AB73AABA51F6379D57 /* Pods-Mute.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Mute/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mute/Pods-Mute.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Mute;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D9B872DCD0E729FBD4AA03264D2A9AED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B29E9A4B9850016C4C13D9D576F20AD /* Pods-Mute.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Mute/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mute/Pods-Mute.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Mute;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FC4738C3605827B2CD972C349A860865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				337AD37B27D7FFADF01DD8D7FE35B27B /* Debug */,
+				FC4738C3605827B2CD972C349A860865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B06AD77C7709266A1EB8B4C795CE59C6 /* Build configuration list for PBXNativeTarget "AMCoreAudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B94373305ABF3EAA4358AF273799979 /* Debug */,
+				2970CBCB364F7C31BE14B3B513FF5020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8238372440DB9B1E8C1B4B7C8AA52B1 /* Build configuration list for PBXNativeTarget "Pods-Mute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9B872DCD0E729FBD4AA03264D2A9AED /* Debug */,
+				88246BF08409BFCF326920713EAFEF36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
