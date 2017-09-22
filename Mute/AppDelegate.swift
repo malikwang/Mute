@@ -61,6 +61,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //            }
 //        }
         device?.setMute(true, channel: 0, direction: .playback)
+        
     }
     func neteasePause(){
         let tell = "tell application \"System Events\"\n"
