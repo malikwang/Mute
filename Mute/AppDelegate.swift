@@ -46,14 +46,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if neteaseItem.state == NSOnState {
                     self.neteasePause()
                 }
-                self.perform(#selector(setOutputMute), with: nil, afterDelay: 0.3)  //延时
+                self.perform(#selector(setOutputMute), with: nil)
             } else {
                 statusItem.button?.image = NSImage(named:"jack")
             }
         }
     }
     func setOutputMute() {
-        device?.setMute(true, channel: 0, direction: .playback)
+        while let isMuted = device?.isMuted(channel: 0, direction: .playback) {
+            if !isMuted{
+                device?.setMute(true, channel: 0, direction: .playback)
+                print("1")
+            }
+        }
     }
     func neteasePause(){
         let tell = "tell application \"System Events\"\n"
