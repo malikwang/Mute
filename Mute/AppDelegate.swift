@@ -17,6 +17,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let menu = NSMenu()
     var neteaseItem = NSMenuItem.init(title: "网易云暂停", action: Selector("toggleState"), keyEquivalent: "")
     
+    //定义一个定时器，用来不断执行静音
+    var timer = Timer()
+    //同样定义定时器重复次数
+    var repeatCount = 0
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         NotificationCenter.defaultCenter.subscribe(self, eventType: AudioDeviceEvent.self, dispatchQueue: DispatchQueue.main)
@@ -46,22 +51,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if neteaseItem.state == NSOnState {
                     self.neteasePause()
                 }
-                self.perform(#selector(setOutputMute), with: nil, afterDelay: 0.3)  //延时
+                timer = Timer.init(timeInterval: 0.1, target:self, selector: Selector("setOutputMute"), userInfo: nil, repeats: true)
+                RunLoop.current.add(timer, forMode: .commonModes)
             } else {
                 statusItem.button?.image = NSImage(named:"jack")
             }
         }
     }
     func setOutputMute() {
-//        while let isMuted = device?.isMuted(channel: 0, direction: .playback) {
-//            print(isMuted)
-//            if !isMuted{
-//                device?.setMute(true, channel: 0, direction: .playback)
-//                break
-//            }
-//        }
         device?.setMute(true, channel: 0, direction: .playback)
-        
+        repeatCount += 1
+        if repeatCount > 10 {
+            timer.invalidate()
+        }
     }
     func neteasePause(){
         let tell = "tell application \"System Events\"\n"
