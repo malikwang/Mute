@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(neteaseItem)
         menu.addItem(NSMenuItem.init(title: "退出", action: Selector("terminate:"), keyEquivalent: "q"))
         statusItem.menu = menu
-       
+        self.openSystemAccessibility()
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -51,7 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 if neteaseItem.state == NSOnState {
                     self.neteasePause()
                 }
-                timer = Timer.init(timeInterval: 0.1, target:self, selector: Selector("setOutputMute"), userInfo: nil, repeats: true)
+                timer = Timer.init(timeInterval: 0.01, target:self, selector: Selector("setOutputMute"), userInfo: nil, repeats: true)
                 RunLoop.current.add(timer, forMode: .commonModes)
             } else {
                 statusItem.button?.image = NSImage(named:"jack")
@@ -61,24 +61,48 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func setOutputMute() {
         device?.setMute(true, channel: 0, direction: .playback)
         repeatCount += 1
-        if repeatCount > 10 {
+        if repeatCount > 100 {
             timer.invalidate()
         }
     }
     func neteasePause(){
-        let tell = "tell application \"System Events\"\n"
-        let key = "key code 49 using {option down, command down}\n"
-        let endTell = "end tell"
-        let neteasePauseScript: NSAppleScript = NSAppleScript(source: tell
-            + key + endTell)!
-        neteasePauseScript.executeAndReturnError(nil)
+        let url = Bundle(for: self.classForCoder).url(forResource: "NeteasePause", withExtension: "scpt")
+        let appleScript = NSAppleScript.init(contentsOf: url as! URL, error: nil)
+        appleScript?.executeAndReturnError(nil)
     }
+    
     func toggleState(){
-        if neteaseItem.state == NSOnState {
-            neteaseItem.state = NSOffState
+        if !self.systemAccessibilityState() {
+            //alert
+            let alert: NSAlert = NSAlert()
+            alert.messageText = "权限提示"
+            alert.informativeText = "您必须将Mute.app添加到[系统偏好设置-->安全与隐私-->辅助功能]列表中才能使用此功能。"
+            alert.alertStyle = NSAlertStyle.warning
+            alert.addButton(withTitle: "确定")
+            alert.addButton(withTitle: "取消")
+            if alert.runModal() == NSAlertFirstButtonReturn{
+                self.openSystemAccessibility()
+            }
         } else {
-            neteaseItem.state = NSOnState
+            if neteaseItem.state == NSOnState {
+                neteaseItem.state = NSOffState
+            } else {
+                neteaseItem.state = NSOnState
+            }
         }
+    }
+    
+    func systemAccessibilityState() -> Bool{
+        let trusted = kAXTrustedCheckOptionPrompt.takeUnretainedValue()
+        let privOptions = [trusted: false] as CFDictionary
+        let accessEnabled = AXIsProcessTrustedWithOptions(privOptions)
+        return accessEnabled
+    }
+    
+    func openSystemAccessibility(){
+        let trusted = kAXTrustedCheckOptionPrompt.takeUnretainedValue()
+        let privOptions = [trusted: true] as CFDictionary
+        AXIsProcessTrustedWithOptions(privOptions)
     }
 }
 
