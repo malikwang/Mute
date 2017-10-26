@@ -61,6 +61,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func showTipWindowWithState(state:Bool){
+        if imageView != nil {
+            imageView.removeFromSuperview()
+        }
         imageView = NSImageView.init(frame: NSRect.init(x: 60, y: 70, width: 80, height: 80))
         if state {
             imageView.image = NSImage(named:"headphone_on")
