@@ -16,6 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     let menu = NSMenu()
     var neteaseItem = NSMenuItem.init(title: "网易云暂停", action: Selector("toggleState"), keyEquivalent: "")
+    var tipWindow:NSWindow!
+    var imageView:NSImageView!
     
     //定义一个定时器，用来不断执行静音
     var timer = Timer()
@@ -25,16 +27,56 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         NotificationCenter.defaultCenter.subscribe(self, eventType: AudioDeviceEvent.self, dispatchQueue: DispatchQueue.main)
-        self.checkJackStatus()
         menu.addItem(neteaseItem)
         menu.addItem(NSMenuItem.init(title: "退出", action: Selector("terminate:"), keyEquivalent: "q"))
         statusItem.menu = menu
         self.openSystemAccessibility()
+        self.initTipWindow()
+        self.checkJackStatus()
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+    
+    func initTipWindow(){
+        let screenFrame = NSScreen.main()?.frame
+        let tipWindowWidth:CGFloat = 200.0
+        let tipWindowHeight:CGFloat = 200.0
+        let screenWidth = screenFrame?.size.width
+        let screenHeight = screenFrame?.size.height
+        let contentRect = CGRect.init(x: (screenWidth! - tipWindowWidth)*0.5, y: (screenHeight! - tipWindowHeight)*0.2, width: tipWindowWidth, height: tipWindowHeight)
+        tipWindow = NSWindow.init(contentRect: contentRect, styleMask: NSWindowStyleMask.borderless, backing: NSBackingStoreType.buffered, defer: false)
+        tipWindow.level = NSPopUpMenuWindowLevel
+        tipWindow.isOpaque = false
+        tipWindow.backgroundColor = NSColor.clear
+        tipWindow.contentView?.wantsLayer = true
+        let effectView = NSVisualEffectView.init(frame: NSRect.init(x: 0, y: 0, width: tipWindowWidth, height: tipWindowHeight))
+        effectView.material = NSVisualEffectMaterial.selection
+        effectView.blendingMode = NSVisualEffectBlendingMode.behindWindow
+        effectView.state = NSVisualEffectState.active
+        effectView.wantsLayer = true;
+        effectView.layer?.cornerRadius = 18
+        tipWindow.contentView?.addSubview(effectView)
+    }
+    
+    func showTipWindowWithState(state:Bool){
+        imageView = NSImageView.init(frame: NSRect.init(x: 60, y: 70, width: 80, height: 80))
+        if state {
+            imageView.image = NSImage(named:"headphone_on")
+        } else {
+            imageView.image = NSImage(named:"headphone_off")
+        }
+        tipWindow.contentView?.addSubview(imageView)
+        tipWindow.orderFront(self)
+    }
+    
+    func autoDismissTipWindowAfterDelay(delay:Double){
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            self.tipWindow.orderOut(self)
+        }
+    }
+    
     
     func checkJackStatus(){
         if device?.isJackConnected(direction: .playback) == true{
@@ -48,6 +90,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let isJackConnected = device?.isJackConnected(direction: .playback) {
             if !isJackConnected {
                 statusItem.button?.image = NSImage(named:"notjack")
+                self.showTipWindowWithState(state: false)
                 if neteaseItem.state == NSOnState {
                     self.neteasePause()
                 }
@@ -55,7 +98,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 RunLoop.current.add(timer, forMode: .commonModes)
             } else {
                 statusItem.button?.image = NSImage(named:"jack")
+                self.showTipWindowWithState(state: true)
             }
+            self.autoDismissTipWindowAfterDelay(delay: 3)
         }
     }
     func setOutputMute() {
