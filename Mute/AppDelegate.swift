@@ -107,7 +107,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     func setOutputMute() {
-        device?.setMute(true, channel: 0, direction: .playback)
+        let mute = "set volume with output muted"
+        let muteScript = NSAppleScript.init(source: mute)
+        muteScript?.executeAndReturnError(nil)
         repeatCount += 1
         if repeatCount > 100 {
             timer.invalidate()
