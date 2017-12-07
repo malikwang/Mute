@@ -12,7 +12,7 @@ import AMCoreAudio
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    let device = AudioDevice.lookup(by: "AppleHDAEngineOutput:1F,3,0,1,1:0")
+    var microphone_device:AudioDevice!
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     let menu = NSMenu()
     var neteaseItem = NSMenuItem.init(title: "网易云暂停", action: Selector("toggleState"), keyEquivalent: "")
@@ -26,6 +26,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        for device in AudioDevice.allDevices() {
+            if device.name.contains("Built-in Output"){
+                microphone_device = device
+            }
+        }
         NotificationCenter.defaultCenter.subscribe(self, eventType: AudioDeviceEvent.self, dispatchQueue: DispatchQueue.main)
         menu.addItem(neteaseItem)
         menu.addItem(NSMenuItem.init(title: "退出", action: Selector("terminate:"), keyEquivalent: "q"))
@@ -82,7 +87,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     
     func checkJackStatus(){
-        if device?.isJackConnected(direction: .playback) == true{
+        if microphone_device?.isJackConnected(direction: .playback) == true{
             statusItem.button?.image = NSImage(named:"jack")
         } else {
             statusItem.button?.image = NSImage(named:"notjack")
@@ -90,7 +95,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func jackChanged(device1:AudioDevice){
-        if let isJackConnected = device?.isJackConnected(direction: .playback) {
+        if let isJackConnected = microphone_device?.isJackConnected(direction: .playback) {
             if !isJackConnected {
                 statusItem.button?.image = NSImage(named:"notjack")
                 self.showTipWindowWithState(state: false)
@@ -162,7 +167,7 @@ extension AppDelegate : EventSubscriber {
         case let event as AudioDeviceEvent:
             switch event {
             case .isJackConnectedDidChange(let audioDevice):
-                if device as? AudioDevice == audioDevice {
+                if microphone_device as? AudioDevice == audioDevice {
                     self.jackChanged(device1: audioDevice)
                 }
             default:
